@@ -1,8 +1,9 @@
 class Main {
     constructor() {
         this.pages = new Array();
-        this.pages.push( new Q( "page1" ) );
-        this.pages.push( new A( "page2" ) );
+        this.db = new DB();
+        this.pages.push( new Q( "page1", this.db ) );
+        this.pages.push( new A( "page2", this.db ) );
 
         for( let page of this.pages ) {
             page.gui_setup();
@@ -11,7 +12,6 @@ class Main {
         let nl = new nylon();
         nl.on( "page", (event,data) => {
             for( let page of this.pages ) {
-                console.log(page);
                 page.display( data.page );
             }
         });
