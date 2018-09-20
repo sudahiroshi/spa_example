@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SPA example</title>
+    <script src="nylon.js"></script>
+    <script src="main.js"></script>
+    <script src="normalpage.js"></script>
+    <script src="q.js"></script>
+    <script src="a.js"></script>
+    <script>
+        window.addEventListener( 'load', () => {
+            new Main();
+        });
+    </script>
+</head>
+<body>
+
+<container>
+    <div id="page1" class="view">
+        <p>
+            1+2= <input type="text" id="input1" class="number">
+        </p>
+        <p>
+            2+3= <input type="text" id="input2" class="number">
+        </p>
+        <button id="kaitou">回答</button>
+    </div>
+    <div id="page2" class="view">
+        <h2>正誤</h2>
+        <p>
+            (1) <span id="maru1"></span>
+        </p>
+        <p>
+            (2) <span id="maru2"></span>
+        </p>
+    </div>
+
+
+    <div id="page3" class="view"></div>
+    <div id="page4" class="view"></div>
+    <div id="page5" class="view"></div>
+</container>
+
+</body>
+</html>
